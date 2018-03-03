@@ -14,18 +14,17 @@
       <a class="page-header__logo" href="index.html">
         <img src="img/logo.png" alt="лого">
       </a>
-      <nav class="navigation">
+      <nav class="navigation" id="menu">
         <ul class="navigation__list">
-          <li class="navigation__item"> <a class="navigation__link navigation__link--active"  href="index.html">Главная</a></li>
-          <li class="navigation__item"> <a class="navigation__link" href="#">Мои работы</a></li>
-          <li class="navigation__item"> <a class="navigation__link" href="#">Цены</a></li>
-          <li class="navigation__item"> <a class="navigation__link" href="#">О нас</a></li>
+          <li class="navigation__item"> <a class="navigation__link navigation__link--active" href="#main">Главная</a></li>
+          <li class="navigation__item"> <a class="navigation__link" href="#works">Мои работы</a></li>
+          <li class="navigation__item"> <a class="navigation__link" href="#price">Цены</a></li>
+          <li class="navigation__item"> <a class="navigation__link" href="#about">О нас</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="page__wrapper">
-    <section class="intro">
+  <section class="intro"  id="main">
       <h1 class="visually-hidden">Mark & Devs создание сайтов не дорого</h1>
       <div class="intro__wrapper">
         <p class="intro__text">Вам нужен сайт?</p>
@@ -33,11 +32,11 @@
         <p class="intro__present">Мы молодая компания которая занимается разработкой сайтов.</p>
         <p class="intro__present">Снизу вы можете ознакомится с нашими работами.</p>
       </div>
-    </section>
-    <section class="work">
+  </section>
+  <section class="work">
       <div class="work__wrapper">
         <div class="work__container">
-          <img src="img/4r7xg.png" alt="" width="1280">
+          <img src="img/4r7xg.png" alt="" width="1240">
         </div>
         <button class="work__arrow work__arrow--back">
           <span class="visually-hidden">Назад</span>
@@ -55,42 +54,16 @@
             </g>
           </svg>
         </button>
-        <button class="work__btn">Заказать сайт!</button>
+        <div class="work__toggles slider__toggles">
+          <span class="slider__toggle slider__toggle--active"></span>
+          <span class="slider__toggle"></span>
+          <span class="slider__toggle"></span>
+        </div>
+        <a class="work__btn" href="#order">Заказать сайт!</a>
       </div>
-    </section>
-<!--
-    <section class="works">
-      <h1 class="visually-hidden">Наши работы</h1>
-      <div class="works__wrapper">
-        <ul class="works__list">
-          <li class="works__item">
-            <a href="#" class="work__link">
-              <img class="works__img" src="img/bg.jpg" alt="Сайт">
-            </a>
-          </li>
-          <li class="works__item">
-            <a href="#" class="work__link">
-              <img class="works__img" src="img/bg3.jpg" alt="Сайт">
-            </a>
-          </li>
-          <li class="works__item">
-            <a href="#" class="work__link">
-              <img class="works__img" src="img/bg4.jpg" alt="Сайт">
-            </a>
-          </li>
-          <li class="works__item">
-            <a href="#" class="work__link">
-              <img class="works__img" src="img/bg3.jpg" alt="Сайт">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
--->
-   </div>
-   </div>
-   <div class="s2">
-   <div class="page__wrapper">
+  </section>
+  </div>
+  <div class="s2">
     <section class="features">
       <div class="features__title-container">
       <h2 class="features__intro-title">Почему выбрать нас?</h2>
@@ -157,7 +130,34 @@
         </ul>
         </div>
     </section>
-    <section class="about">
+    <section class="works" id="works">
+      <h1 class="works__title">Наши последние работы</h1>
+      <div class="works__wrapper">
+        <ul class="works__list">
+          <li class="works__item">
+            <a href="#" class="work__link">
+              <img class="works__img" src="img/bg.jpg" alt="Сайт">
+            </a>
+          </li>
+          <li class="works__item">
+            <a href="#" class="work__link">
+              <img class="works__img" src="img/bg3.jpg" alt="Сайт">
+            </a>
+          </li>
+          <li class="works__item">
+            <a href="#" class="work__link">
+              <img class="works__img" src="img/bg4.jpg" alt="Сайт">
+            </a>
+          </li>
+          <li class="works__item">
+            <a href="#" class="work__link">
+              <img class="works__img" src="img/bg3.jpg" alt="Сайт">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="about" id="about">
       <h1 class="visually-hidden">О нас</h1>
       <div class="about__wrapper">
       <hr>
@@ -166,10 +166,31 @@
         </p>
         <span class="about__text-bot">Мы используем:</span>
         <ul class="about__list">
-          <li class="about__item">БЭМ методологию</li>
+          <li class="about__item">
+            <svg class="about__svg" width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	           viewBox="0 0 434.147 434.147" style="enable-background:new 0 0 434.147 434.147;" xml:space="preserve">
+              <path style="fill:#FC490B;" d="M27.336,14.372l28.177,360.474c0.423,5.413,4.087,10.029,9.263,11.67l148.268,47.008
+                c2.622,0.831,5.437,0.831,8.059,0l148.268-47.008c5.176-1.641,8.84-6.257,9.263-11.67l28.177-360.474
+                C407.417,6.622,401.292,0,393.519,0H40.629C32.856,0,26.731,6.622,27.336,14.372z M334.553,126.215H150.918l5.542,51.105h174.099
+                L319.17,323.013l-102.096,32.369l-102.096-32.369l-5.95-76.116h53.588v37.336l55.89,15l55.556-15l4.31-59.503H107.295L95.937,79.419
+                H338.21L334.553,126.215z"/>
+            </svg>
+          </li>
+          <li class="about__item">
+            <svg class="about__svg" width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <polygon style="fill:#2196F3;" points="32,0 72.8,460.8 256,512 439.136,460.832 480,0 "/>
+              <polygon style="fill:#FAFAFA;" points="392.768,150.688 387.616,208.576 372.064,382.112 256,414.208 255.904,414.24
+                139.904,382.112 131.808,291.36 188.64,291.36 192.864,338.432 255.936,355.456 255.968,355.424 319.136,338.4 327.744,259.968
+                129.088,260.512 123.456,206.88 332.512,204.416 336.736,147.008 117.856,147.616 114.176,94.208 256,94.208 397.824,94.208 "/>
+            </svg>
+          </li>
+          <li class="about__item">БЭМ</li>
+          <li class="about__item">Адаптивная верстка</li>
           <li class="about__item">Less</li>
           <li class="about__item">Gulp</li>
           <li class="about__item">Flexbox - сетки</li>
+          <li class="about__item">Git</li>
         </ul>
       </div>
     </section>
@@ -180,7 +201,6 @@
       </div>
     </section>
     <section class="contact">
-
       <div class="contact__wrapper">
       <hr>
       <h2 class="contact__title">Связь со мной</h2>
@@ -226,7 +246,7 @@
           </a></li>
           <li class="contact__item"><a href="#" class="contact__link contact__link--twitter">
             <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	         viewBox="0 0 112.197 112.197" style="enable-background:new 0 0 112.197 112.197;" xml:space="preserve">
+           viewBox="0 0 112.197 112.197" style="enable-background:new 0 0 112.197 112.197;" xml:space="preserve">
           <g>
               <circle style="fill:#55ACEE;" cx="56.099" cy="56.098" r="56.098"/>
               <g>
@@ -253,7 +273,7 @@
           </a></li>
         </ul>
         <p class="contact__text">Или можете написать мне прямо тут!</p>
-        <form action="post" class="contact__form form">
+        <form action="post" class="contact__form form" id="order">
           <div class="form__container">
             <label class="form__label" for="name">Ваше имя:</label>
             <input class="form__input" type="text" id="name" required>
@@ -268,5 +288,20 @@
       </div>
     </section>
     </div>
-    </div>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+ $(document).ready(function(){
+    $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+});
+</script>
 </body>
