@@ -21,27 +21,45 @@
 }
 
 .works__item {
+  margin: 0 auto;
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
   width: 400px;
   height: 300px;
+  background-color: gray;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.75);
-}
-
-.works__item:nth-of-type(1) {
 
   &::before {
-    content: "Сайт штата";
+    content: "Сайт";
     position: absolute;
     border: 2px solid white;
     border-radius: 2%;
     color: white;
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
+    text-align: center;
+    z-index: 100;
+  }
+}
+
+//.works__item:hover::after {
+//  content: "";
+//  position: absolute;
+//  top: 0;
+//  width: 400px;
+//  height: 300px;
+//  background-color: rgba(0,0,0,0.7);
+//}
+
+.works__item:nth-of-type(1) {
+
+  &::before {
+    content: "Сайт штата";
   }
 
   &:hover::before {
@@ -53,15 +71,6 @@
 
   &::before {
     content: "Фото сервис";
-    position: absolute;
-    border: 2px solid white;
-    border-radius: 2%;
-    color: white;
-    padding: 20px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
   }
 
   &:hover::before {
@@ -72,38 +81,18 @@
 .works__item:nth-of-type(3) {
 
   &::before {
-    content: "Интернет магазин";
-    position: absolute;
-    border: 2px solid white;
-    border-radius: 2%;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
+    content: "Личный сайт";
   }
 
   &:hover::before {
-    background-color: #CC0000;
+    background-color: #000000;
   }
 }
 
 .works__item:nth-of-type(4) {
 
   &::before {
-    content: "Личный блог";
-    position: absolute;
-    border: 2px solid white;
-    border-radius: 2%;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
+    content: "Coming Soon..";
   }
 
   &:hover::before {
@@ -113,9 +102,7 @@
 
 .works__img {
   width: 100%;
-  height: 100%;
 }
-
 
 .work__wrapper {
   padding-bottom: 100px;
@@ -123,7 +110,7 @@
 
 .work__container {
   position: relative;
-  width: 1024px;
+  width: 900px;
   height: 500px;
   margin: 0 auto;
   border-radius: 1%;
@@ -132,7 +119,7 @@
 }
 
 .work__container img {
- width: 100%;
+  width: 100%;
 }
 
 .work__arrow {
@@ -188,8 +175,99 @@
   width: 400px;
   height: 60px;
   text-align: center;
-  background-color: green;
   color: white;
   box-shadow: 3px 3px 0px 2px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(80,214,161,1) 92%);
 }
+
+
+
+.works__tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  transform: translatex(-50%);
+}
+
+.works__tag-list li {
+  display: inline-block;
+    padding: 0 .5em;
+    background-color: #313131;
+    color: #999;
+    border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: #222;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75em;
+    box-shadow: 1px 1px 0 rgba(0,0,0,.25);
+    margin: 2px;
+    position: relative;
+    text-shadow: -1px -1px 0 #3f3f3f, -1px 0 0 #3f3f3f, -1px 1px 0 #3f3f3f, 0 -1px 0 #3f3f3f, 0 0 0 #3f3f3f, 0 1px 0 #3f3f3f, 1px -1px 0 #3f3f3f, 1px 0 0 #3f3f3f, 1px 1px 0 #3f3f3f;
+    z-index: -10;
+}
+
+.works__item:hover .works__tag-list {
+  display: block;
+  text-align: center;
+}
+
+.works__item:hover .works__tag-list li {
+  z-index: 20;
+}
+
+.works__bar {
+  display: block;
+  position: relative;
+  height: 24px;
+  background-color: #ddd;
+  width: 100%;
+  color: #6a6a6a;
+  z-index: 10;
+}
+
+.works__bar-i {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background-color: #ff5f57;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  
+  &::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background-color: #ffbd2e;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 16px;
+  }
+  
+  &::after {
+    content: "";
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background-color: #28ca41;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 32px;
+  }
+  
+}
+
+
