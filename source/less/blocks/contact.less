@@ -35,14 +35,38 @@
   color: #ffffff;
 }
 
-.contact__textarea {
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-color: transparent;
-  width: 800px;
-  color: #ffffff;
-  padding: 20px;
-  resize: vertical;
-  font-size: 18px;
+
+@media (max-width: 659px) {
+  .contact {
+    padding-bottom: 40px;
+  }
+  
+  .contact__title {
+    font-size: 24px;
+  }
+  
+  .contact__wrapper {
+    width: 320px;
+  }
+  
+  .contact__text {
+    font-size: 18px;
+    width: 300px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 660px) and (max-width: 960px) {
+  .contact__wrapper {
+    width: 80%;
+  }
+  
+  .contact__title {
+    font-size: 24px;
+  }
+  
+  .contact__text {
+    font-size: 18px;
+    text-align: center;
+  }
 }
