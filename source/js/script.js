@@ -19,10 +19,30 @@
 //    }
 //    $('.slidewrapper').animate({left: -currentSlide*slideWidth},300).data('current',currentSlide);
 //}
-$(function() {
-  $('.wrapper').click(function() {
-  	$('.content').toggleClass('open');
-  	$(this).toggleClass('open');
-  })
+// $(function() {
+//   $('.wrapper').click(function() {
+//   	$('.content').toggleClass('open');
+//   	$(this).toggleClass('open');
+//   })
 
-})
+// })
+
+// $(document).ready(function() {
+// 	// Update nav selected when click
+// 	$('a').on('click', function() {
+// 		console.log("haha");
+// 		$('.navigation-link').removeClass('navigation__link--active');
+// 		$(this).parent().addClass('navigation__link--active');
+// 	});
+//   slideSwitch();
+	
+// });
+
+
+document.getElementById('btn-back').onclick = sliderLeft;
+
+function sliderLeft() {
+	console.log('Nazhat');
+}
+
+sliderLeft();
